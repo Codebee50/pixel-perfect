@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Steradian";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(src/fonts/st-regular.otf) format("opentype");
+  }
+  @font-face {
+    font-family: "Steradian";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(src/fonts/st-black.otf) format("opentype");
+  }
+  @font-face {
+    font-family: "Steradian";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(src/fonts/st-bold.otf) format("opentype");
+  }
+}
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  .padding-x {
+    @apply lg:px-16 px-6;
+  }
+}
