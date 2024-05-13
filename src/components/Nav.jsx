@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const Nav = () => {
   return (
-    <div className="w-full padding-x flex flex-row items-center justify-between py-5 fixed top-0 z-10">
+    <div className="w-full hero-padding bg-white flex flex-row items-center justify-between py-5 fixed top-0 z-10">
         <div className="flex flex-row items-center gap-10">
             <div className="flex flex-row items-center">
                 <img src={baselogo} className="w-[25px]" alt="Pixel perfect web design agency"  />

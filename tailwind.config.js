@@ -16,7 +16,8 @@ export default {
         'green100': '#31AA8E'
       },
       screens: {
-        'tab-one': '850px'
+        'tab-one': '1060px',
+        'tab-956': '956px'
       }
     },
   },
