@@ -26,7 +26,7 @@ const Nav = () => {
         </div>
 
         <div className="flex flex-row items-center gap-3 max-tab-one:hidden">
-            <motion.button whileTap={{scale:0.85}} className="px-7 py-[0.65rem] rounded-lg font-steradian bg-transparent border hover:border-green100 border-gray100 text-sm text-green100">Contact</motion.button>
+            <motion.button whileTap={{scale:0.85}} className="px-7 py-[0.65rem] rounded-lg font-steradian bg-transparent border hover:border-green100 border-green100 text-sm text-green100">Contact</motion.button>
             <motion.button whileTap={{scale:0.85}} className="px-7 py-[0.65rem] rounded-lg font-steradian bg-green100 text-white text-sm">Work with us</motion.button>
         </div>
 

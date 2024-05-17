@@ -4,6 +4,7 @@ import arrowthin from './arrowthin.svg'
 import curledarrrow from './curledarrow.svg'
 import straightarrow from './straightarrow.svg'
 import curlarrow from './curlarrow.svg'
+import arrowup from './arrowup.svg'
 
 export{
     baselogo,
@@ -11,5 +12,6 @@ export{
     arrowthin,
     curledarrrow,
     curlarrow,
-    straightarrow
+    straightarrow,
+    arrowup
 }

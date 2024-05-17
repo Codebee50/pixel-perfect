@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,6 +18,13 @@
   @font-face {
     font-family: "Steradian";
     font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(src/fonts/st-medium.otf) format("opentype");
+  }
+  @font-face {
+    font-family: "Steradian";
+    font-style: normal;
     font-weight: 900;
     font-display: swap;
     src: url(src/fonts/st-black.otf) format("opentype");
@@ -23,6 +35,10 @@
     font-weight: 700;
     font-display: swap;
     src: url(src/fonts/st-bold.otf) format("opentype");
+  }
+
+  *{
+    scroll-behavior: smooth;
   }
 }
 
@@ -40,5 +56,9 @@
 
   .hero-padding{
     @apply lg:px-32 sm:px-10 px-6
+  }
+
+  .grid-auto-290{
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   }
 }
