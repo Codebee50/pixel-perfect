@@ -2,6 +2,7 @@ import { SiMaterialdesignicons, SiTaichigraphics, SiWebmoney } from "react-icons
 import { IoGameControllerOutline } from "react-icons/io5";
 import { CiMobile1 } from "react-icons/ci";
 import { MdOutlineBrandingWatermark } from "react-icons/md";
+import { w1, w2 } from "../assets/works";
 
 
 export const navLinks = [
@@ -15,13 +16,39 @@ export const navLinks = [
   },
   {
     label: "Our work",
-    link: "#",
+    link: "#projects",
   },
   {
     label: "Testimonials",
     link: "#",
   },
 ];
+
+export const projectsList = [
+  {
+    title: 'Beautiful website for a Cause-Driven NGO to clearly communicate its mission.',
+    image:w1,
+    link: 'https://hannatuhalanfoundation.com',
+    name: 'Hannatu halan foundation',
+    highlights: [
+      'Website',
+      'Branding',
+
+    ]
+  },
+  {
+    title: 'User friendly website for a Nigerian based solar installation company.',
+    image:w2,
+    link: 'https://auspiciousnetworksolutions.com.ng/',
+    name: 'Auspicious network solutions',
+    highlights: [
+      'Website',
+      'Logo design',
+      'Branding',
+
+    ]
+  }
+]
 
 export const servicesList = [
   {

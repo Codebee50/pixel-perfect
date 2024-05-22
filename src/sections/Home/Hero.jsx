@@ -7,15 +7,11 @@ import { arrowup } from "../../assets/icons";
 
 const Hero = () => {
   return (
-    <main className="w-full">
+    <main className="w-full flex flex-col">
       <Nav />
 
       <section className="w-full tab-956:min-h-screen flex flex-col-reverse max-tab-956:pt-[15vh] tab-956:flex-row tab-956:items-center items-center tab-956:justify-between hero-padding ">
-        {/* <img
-          className="w-[200px] absolute top-[300px] right-[200px] -rotate-12"
-          src={curlarrow}
-          alt=""
-        /> */}
+   
 
         <motion.div className="flex flex-col bg-white max-tab-956:mt-7">
           <motion.p
@@ -79,6 +75,12 @@ const Hero = () => {
           <LongBar height="80" index={6} />
         </motion.div> */}
       </section>
+
+      {/* <div className="w-full flex flex-row items-center justify-between">
+        <div>
+          <p>+2349128168542, email@example.com</p>
+        </div>
+      </div> */}
     </main>
   );
 };

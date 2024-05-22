@@ -21,7 +21,8 @@ export default {
       },
       screens: {
         'tab-one': '1060px',
-        'tab-956': '956px'
+        'tab-956': '956px',
+        'tab-400': '400px'
       }
     },
   },

@@ -8,7 +8,7 @@ const Nav = () => {
     <div className="w-full hero-padding bg-white flex flex-row items-center justify-between py-5 fixed top-0 z-10">
         <div className="flex flex-row items-center gap-10">
             <div className="flex flex-row items-center">
-                <img src={baselogo} className="w-[25px]" alt="Pixel perfect web design agency"  />
+                <img src={baselogo} className="w-[19px] sm:w-[25px]" alt="Pixel perfect web design agency"  />
                 <p className="font-steradian ml-3 font-bold text-lg">Pixel Perfect</p>
             </div>
 
