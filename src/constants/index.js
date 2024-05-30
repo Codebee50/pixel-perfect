@@ -52,39 +52,39 @@ export const projectsList = [
 
 export const servicesList = [
   {
-    name: "Web developement",
+    name: "Web development",
     icon: SiWebmoney,
     description:
-      "internships facilitates experiential learning, facilitating career readiness and cultivating leadership qualities necessary for future professional roles. SIWES also emphasizes leadership development, encouraging students to acquire basic leadership skills through mentorship opportunities with nonprofit leaders",
+      "From simple landing pages to complex web applications, our team crafts websites that are not only visually appealing but also highly functional. We utilize the latest technologies and frameworks to ensure your website is fast, secure, and scalable. Let us help you establish a strong online presence that drives engagement and growth.",
   },
   {
-    name: "Game developement",
+    name: "Game development",
     icon: IoGameControllerOutline,
     description:
-      "internships facilitates experiential learning, facilitating career readiness and cultivating leadership qualities necessary for future professional roles. SIWES also emphasizes leadership development, encouraging students to acquire basic leadership skills through mentorship opportunities with nonprofit leaders",
+      "Whether it’s a mobile game or a full-scale console game, we specialize in developing engaging and immersive gaming experiences. Our team of expert developers and designers work collaboratively to create games that are not only fun to play but also deliver a seamless user experience. From concept to launch, we handle every aspect of game development to bring your vision to reality.",
   },
   {
     name: "UI/UX design",
     icon: SiMaterialdesignicons,
     description:
-      "internships facilitates experiential learning, facilitating career readiness and cultivating leadership qualities necessary for future professional roles. SIWES also emphasizes leadership development, encouraging students to acquire basic leadership skills through mentorship opportunities with nonprofit leaders",
+      "Our designers create user-centric interfaces that enhance user experience and ensure your product is both beautiful and easy to use. We conduct thorough research and user testing to understand your audience and their needs, ensuring that every design decision contributes to a cohesive and intuitive user journey. Transform your digital products with our innovative and effective UI/UX solutions.",
   },
   {
-    name: "Mobile app developement",
+    name: "Mobile app development",
     icon: CiMobile1,
     description:
-      "internships facilitates experiential learning, facilitating career readiness and cultivating leadership qualities necessary for future professional roles. SIWES also emphasizes leadership development, encouraging students to acquire basic leadership skills through mentorship opportunities with nonprofit leaders",
+      "We build robust, user-friendly mobile apps for both iOS and Android, tailored to meet your specific business needs. Our development process involves rigorous testing and quality assurance to ensure your app performs flawlessly across all devices. Whether you need a simple utility app or a complex mobile platform, we have the expertise to deliver high-quality mobile solutions.",
   },
   {
     name: "Branding",
     icon:MdOutlineBrandingWatermark,
     description:
-      "internships facilitates experiential learning, facilitating career readiness and cultivating leadership qualities necessary for future professional roles. SIWES also emphasizes leadership development, encouraging students to acquire basic leadership skills through mentorship opportunities with nonprofit leaders",
+      "From logo design to complete brand guidelines, we help you establish a strong, consistent brand that resonates with your audience. Our branding services include market research, brand strategy, and visual identity design, all aimed at creating a cohesive brand experience. Let us help you build a memorable brand that stands out in the competitive market.",
   },
   {
     name: "Graphic design",
     icon: SiTaichigraphics,
     description:
-      "internships facilitates experiential learning, facilitating career readiness and cultivating leadership qualities necessary for future professional roles. SIWES also emphasizes leadership development, encouraging students to acquire basic leadership skills through mentorship opportunities with nonprofit leaders",
+      "Our graphic designers create eye-catching visuals for all your needs, from marketing materials to digital content. We combine creativity with strategic thinking to produce designs that effectively communicate your message and captivate your audience. Whether you need promotional graphics, infographics, or custom illustrations, our team is here to bring your ideas to life.",
   },
 ];

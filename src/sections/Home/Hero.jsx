@@ -11,8 +11,6 @@ const Hero = () => {
       <Nav />
 
       <section className="w-full tab-956:min-h-screen flex flex-col-reverse max-tab-956:pt-[15vh] tab-956:flex-row tab-956:items-center items-center tab-956:justify-between hero-padding ">
-   
-
         <motion.div className="flex flex-col bg-white max-tab-956:mt-7">
           <motion.p
             className="font-steradian text-green100 font-medium max-sm:text-sm"
@@ -36,10 +34,11 @@ const Hero = () => {
             animate={{ opacity: [0, 0, 0, 1], y: 0 }}
             transition={{ duration: 0.7, ease: "easeIn", delay: 0.4 }}
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum
-            placeat dolor voluptas labore. Similique deleniti, nemo omnis iure
-            impedit quasi quam accusantium quas ipsum molestias id voluptas? Ad,
-            ut?
+            At Pixel perfect, we are dedicated to transforming ideas into
+            reality through innovative design and development solutions. Our
+            diverse team of experts specializes in delivering high-quality
+            services across multiple domains to help your business thrive in the
+            digital landscape.
           </motion.p>
           <motion.button
             whileTap={{ scale: 0.85 }}
@@ -53,10 +52,9 @@ const Hero = () => {
         <div className="flex flex-row items-end gap-3 min-h-[16vh] sm:min-h-[40vh] relative">
           <div className="w-[200px] absolute top-[20px] left-[20px] flex flex-col">
             <p className="font-badscript text-green100">Build & Scale</p>
-            <img src={arrowup} alt="" className="opacity-50 w-20"/>
+            <img src={arrowup} alt="" className="opacity-50 w-20" />
           </div>
 
-          
           <LongBar innerDivClassName="h-[1vh]" index={1} />
           <LongBar innerDivClassName="h-[2vh] sm:h-[5vh]" index={2} />
           <LongBar innerDivClassName="h-[5vh] sm:h-[10vh]" index={3} />
