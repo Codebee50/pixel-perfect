@@ -13,6 +13,7 @@ export default {
         'dancingscript': ['Dancing Script', 'cursive']
       },
       colors:{
+        'bg-overlay': 'rgba(0, 0, 0, 0.5)',
         'purple100': '#484ca1',
         'purple200': '#4B50EC',
         'gray100': '#a4abbd',
