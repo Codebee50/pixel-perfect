@@ -11,7 +11,7 @@ const ServiceCard = (props) => {
         ease: "easeIn",
         type: "spring",
         duration: 2,
-        delay: 0.3 * props.index,
+        delay: 0.2 * props.index,
       }}
       viewport={{ once: true }}
     >
