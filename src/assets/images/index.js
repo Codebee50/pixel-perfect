@@ -1,4 +1,4 @@
-import workTogether from './work-together.jpg'
+import workTogether from './work-together.webp'
 
 export {
     workTogether
