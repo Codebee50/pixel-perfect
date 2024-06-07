@@ -94,6 +94,32 @@ const Contact = () => {
               />
             ))}
           </div>
+
+
+          <div className="mt-5 pb-6">
+            <form action="" className="w-full flex flex-col">
+              <div className="grid grid-cols-1 tab-500:grid-cols-2 gap-4 items-end">
+                  <div className="flex flex-col w-full">
+                    <label htmlFor="name" className="text-slate-400 font-steradian mt-7 text-sm">Your name</label>
+                    <input type="text" name="name" id="name" className="border-b-2 w-full outline-none p-2 font-steradian" />
+                  </div>
+
+                  <div className="flex flex-col w-full">
+                    <label htmlFor="name" className="text-slate-400 font-steradian mt-7 text-sm">Your email or phone number</label>
+                    <input type="text" name="contact" id="contact" className="border-b-2 w-full outline-none p-2 font-steradian" />
+                  </div>
+
+              </div>
+
+              <div className="flex flex-col w-full">
+                  <label htmlFor="name" className="text-slate-400 font-steradian mt-7 text-sm">Project Description (Optional)</label>
+                  <textarea rows={3} type="text" name="contact" id="contact" className="border-b-2 w-full outline-none p-2 font-steradian" />
+              </div>
+
+              <input type="submit" value="Submit" className="bg-black100 text-white w-full p-4 mt-5" />
+              
+            </form>
+          </div>
         </div>
       </div>
     </section>
