@@ -1,9 +1,20 @@
 import { FaInstagram } from "react-icons/fa";
 import { workTogether } from "../../assets/images";
 import { FaXTwitter } from "react-icons/fa6";
-import { servicesList } from "../../constants";
+import { budjetList, servicesList } from "../../constants";
+import ChooseServiceButton from "../../components/ChooseServiceButton";
+import { useState } from "react";
+import ChooseButton from "../../components/ChooseButton";
 
 const Contact = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedBudjetIndex, setSelectedBudjectIndex] = useState(0)
+
+  const onSetSelectedIndex = (index) => {
+    setSelectedIndex(index);
+  };
+
+
   return (
     <section className="w-full min-h-screen hero-padding pt-5">
       <div className="w-full h-[200px] bg-slate-300 relative rounded-lg overflow-hidden">
@@ -52,21 +63,37 @@ const Contact = () => {
 
         <div className="flex flex-col max-sm:mt-5 w-full sm:w-[60%]">
           <p className="text-slate-400 font-steradian">HIRE US</p>
-          <h1 className="font-steradian text-[2rem] sm:text-[3rem] leading-[1.2] font-medium text-black100">Lets Get Started On Your Project!</h1>
-
+          <h1 className="font-steradian text-[2rem] sm:text-[3rem] leading-[1.2] font-medium text-black100">
+            Lets Get Started On Your Project!
+          </h1>
 
           <p className="text-slate-400 font-steradian mt-7">Services</p>
 
           <div className="flex flex-row flex-wrap justify-start">
-            {
-              servicesList.map((service)=> (
-                <button key={`choose-service-${service.name}`} className="bg-[#F3F3F3] mr-3 mt-3 py-2 px-4 rounded-full" >
-                  <p className="font-steradian text-[#8B8B8B] text-[0.8rem]">{service.name}</p>
-                </button>
-              ))
-            }
+            {servicesList.map((service, index) => (
+              <ChooseServiceButton
+                service={service}
+                key={`choose-service-${service.name}`}
+                index={index}
+                selectedIndex={selectedIndex}
+                onSetSelectedIndex={onSetSelectedIndex}
+              />
+            ))}
           </div>
 
+
+          <p className="text-slate-400 font-steradian mt-7">Your Budjet</p>
+
+          <div className="flex flex-row flex-wrap justify-start">
+            {budjetList.map((budjet, index) => (
+              <ChooseButton
+                selected={index===selectedBudjetIndex}
+                key={`choose-budjet-${budjet}`}
+                name={budjet}
+                onClick={setSelectedBudjectIndex.bind(null, index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

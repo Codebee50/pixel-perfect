@@ -88,3 +88,11 @@ export const servicesList = [
       "Our graphic designers create eye-catching visuals for all your needs, from marketing materials to digital content. We combine creativity with strategic thinking to produce designs that effectively communicate your message and captivate your audience. Whether you need promotional graphics, infographics, or custom illustrations, our team is here to bring your ideas to life.",
   },
 ];
+
+
+export const budjetList = [
+  '20k-100k',
+  '100k-500k',
+  '500k-2M',
+  'Above 2M'
+]
