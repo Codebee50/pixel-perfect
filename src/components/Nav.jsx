@@ -37,7 +37,7 @@ const Nav = () => {
                 return (
                   <li key={navItem.label}>
                     <a
-                      className="font-steradian text-gray100 hover:text-black100 "
+                      className="font-steradian text-gray100 hover:text-purple100 "
                       href={navItem.link}
                     >
                       {navItem.label}

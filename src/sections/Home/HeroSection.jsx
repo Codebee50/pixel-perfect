@@ -46,17 +46,18 @@ const HeroSection = () => {
           </motion.p>
 
           <div className="flex flex-row items-center gap-4 mt-7 flex-wrap">
-            <motion.button
+            <motion.a
+              href="#contact"
               whileTap={{ scale: 0.85 }}
               className="flex flex-row items-center justify-center tab-350px:justify-between gap-3 px-5 py-[0.8rem] w-full tab-350px:w-max rounded-lg font-steradian border border-purple100 text-sm text-white bg-purple100"
             >
               Get started
               <IoMdArrowForward size={"1.3em"} />
 
-            </motion.button>
+            </motion.a>
 
             
-            <a className="flex flex-row items-center justify-center gap-3 border border-whatsappgreen px-5 py-[0.8rem] rounded-lg cursor-pointer max-tab-350px:w-full">
+            <a href="https://wa.me/+2349036784771?text=Hello I will like to make inquiries concerning Pixelperfect's services" className="flex flex-row items-center justify-center gap-3 border border-whatsappgreen px-5 py-[0.8rem] rounded-lg cursor-pointer max-tab-350px:w-full">
                 <IoLogoWhatsapp size={'1.3rem'} className="fill-whatsappgreen"/>
                 <p className="font-steradian text-whatsappgreen text-sm">Lets chat</p>
              </a>

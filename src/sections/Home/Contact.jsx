@@ -22,19 +22,6 @@ const Contact = () => {
 
   const { isLoading: formLoading, sendEmail } = useSendEmail();
 
-  const [api, contextHolder] = notification.useNotification();
-
-  const openNotification = (title, message) => {
-    api.open({
-      message: title,
-      description: message,
-      className: "font-steradian",
-      duration: 10,
-    });
-
-    
-  };
-
   const makeHtmlContent = (name, contact, description) => {
     return `
     <html>
@@ -70,19 +57,21 @@ const Contact = () => {
     // );
 
     notification.success({
-      message: 'We appreciate you contacting Pixel Perfect. We have received the details of your request and a member of our team will be in touch shortly to discuss it further.',
+      message:
+        "We appreciate you contacting Pixel Perfect. We have received the details of your request and a member of our team will be in touch shortly to discuss it further.",
       duration: 10,
-      className: 'font-steradian'
-    })
+      className: "font-steradian",
+    });
   };
 
   const onEmailError = () => {
     notification.error({
-      message: 'An error occured while trying to deliver youe email, please ensure you are connected to the internet and try again.',
+      message:
+        "An error occured while trying to deliver youe email, please ensure you are connected to the internet and try again.",
       duration: 7,
-      className: 'font-steradian'
-    })
-  }
+      className: "font-steradian",
+    });
+  };
 
   const onContactFormSubmitHandler = (event) => {
     event.preventDefault();
@@ -101,7 +90,7 @@ const Contact = () => {
       subject: `Pixel perfect mail from ${name}`,
       htmlContent: htmlEmail,
       onSuccess: onEmailSent,
-      onError: onEmailError
+      onError: onEmailError,
     });
   };
 
@@ -110,8 +99,6 @@ const Contact = () => {
       className="w-full min-h-screen hero-padding pt-5 scroll-margin-top"
       id="contact"
     >
-      {contextHolder}
-
       <div className="w-full h-[200px] bg-slate-300 relative rounded-lg overflow-hidden">
         <img
           src={workTogether}
@@ -127,6 +114,8 @@ const Contact = () => {
 
       <div className="w-full flex flex-col max-sm:gap-5 sm:flex-row pt-7 ">
         <div className="flex flex-row items-start max-sm:justify-between max-sm:gap-9 flex-wrap sm:flex-col w-full sm:w-[40%]">
+
+          
           <div className="flex flex-col">
             <p className="text-slate-400 font-steradian">Contacts</p>
             <a
@@ -154,6 +143,9 @@ const Contact = () => {
               </a>
             </div>
           </div>
+
+
+         
         </div>
 
         <div className="flex flex-col max-sm:mt-5 w-full sm:w-[60%]">
