@@ -14,6 +14,16 @@ const Contact = () => {
     setSelectedIndex(index);
   };
 
+  const onContactFormSubmitHandler = (event)=>{
+    event.preventDefault()
+    const formData = new FormData(event.target)
+    const name = formData.get('name')
+    const contact = formData.get('contact')
+    const description = formData.get('description')
+
+    console.log(name, contact, description)
+  }
+
 
   return (
     <section className="w-full min-h-screen hero-padding pt-5">
@@ -97,7 +107,7 @@ const Contact = () => {
 
 
           <div className="mt-5 pb-6">
-            <form action="" className="w-full flex flex-col">
+            <form action="" className="w-full flex flex-col" onSubmit={onContactFormSubmitHandler}>
               <div className="grid grid-cols-1 tab-500:grid-cols-2 gap-4 items-end">
                   <div className="flex flex-col w-full">
                     <label htmlFor="name" className="text-slate-400 font-steradian mt-7 text-sm">Your name</label>
@@ -113,10 +123,10 @@ const Contact = () => {
 
               <div className="flex flex-col w-full">
                   <label htmlFor="name" className="text-slate-400 font-steradian mt-7 text-sm">Project Description (Optional)</label>
-                  <textarea rows={3} type="text" name="contact" id="contact" className="border-b-2 w-full outline-none p-2 font-steradian" />
+                  <textarea rows={3} type="text" name="description" id="contact" className="border-b-2 w-full outline-none p-2 font-steradian" />
               </div>
 
-              <input type="submit" value="Submit" className="bg-black100 text-white w-full p-4 mt-5" />
+              <input type="submit" value="Submit" className="bg-black100 text-white w-full p-4 mt-5 rounded-lg cursor-pointer font-steradian" />
               
             </form>
           </div>

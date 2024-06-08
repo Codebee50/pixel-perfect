@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Services = () => {
   return (
     <section
-      className="w-full max-tab-956:mt-16 hero-padding min-h-screen scroll-margin-top"
+      className="w-full mt-16 tab-956:mt-10 hero-padding min-h-screen scroll-margin-top"
       id="services"
     >
       <SectionHeaderOne

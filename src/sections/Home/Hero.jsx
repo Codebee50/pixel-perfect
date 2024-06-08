@@ -7,11 +7,15 @@ import { arrowup } from "../../assets/icons";
 
 const Hero = () => {
   return (
-    <main className="w-full flex flex-col">
+    <main className="w-full flex flex-col relative">
       <Nav />
 
+      <div className="w-[90%] sm:w-[70%] absolute h-[50vh]  sm:h-screen bg-[#f0f9f5] -z-10 top-0 right-0 rounded-bl-full">
+
+      </div>
+
       <section className="w-full tab-956:min-h-screen flex flex-col-reverse max-tab-956:pt-[15vh] tab-956:flex-row tab-956:items-center items-center tab-956:justify-between hero-padding ">
-        <motion.div className="flex flex-col bg-white max-tab-956:mt-7">
+        <motion.div className="flex flex-col max-tab-956:mt-7">
           <motion.p
             className="font-steradian text-green100 font-medium max-sm:text-sm"
             initial={{ opacity: 0, y: -50 }}
@@ -29,7 +33,7 @@ const Hero = () => {
             Design, Build, Scale your ideas and businesses
           </motion.h1>
           <motion.p
-            className="sm:w-[90%] max-w-[720px] font-steradian text-gray100 max-sm:text-sm mt-2"
+            className="sm:w-[90%] max-w-[720px] font-steradian text-gray100 max-sm:text-[0.8rem] mt-2"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: [0, 0, 0, 1], y: 0 }}
             transition={{ duration: 0.7, ease: "easeIn", delay: 0.4 }}

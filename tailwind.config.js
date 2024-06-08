@@ -18,13 +18,18 @@ export default {
         'purple200': '#4B50EC',
         'gray100': '#a4abbd',
         'green100': '#31AA8E',
-        'black100': '#01060E'
+        'black100': '#01060E',
+        'green200': '#f0f9f5',
+        'whatsappgreen': '#128C7E'
+        
       },
       screens: {
         'tab-one': '1060px',
         'tab-956': '956px',
         'tab-400': '400px',
-        'tab-500': '500px'
+        'tab-450': '450px',
+        'tab-500': '500px',
+        'tab-350px': '350px'
       }
     },
   },
