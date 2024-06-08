@@ -5,28 +5,36 @@ import { budjetList, servicesList } from "../../constants";
 import ChooseServiceButton from "../../components/ChooseServiceButton";
 import { useState } from "react";
 import ChooseButton from "../../components/ChooseButton";
+import { LoadingOutlined } from "@ant-design/icons";
+import { Spin } from "antd";
+import useSendEmail from "../../hooks/useSendEmail";
 
 const Contact = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [selectedBudjetIndex, setSelectedBudjectIndex] = useState(0)
-
+  const [selectedBudjetIndex, setSelectedBudjectIndex] = useState(0);
+  const [formLoading, setformLoading] = useState(false)
+  const {isLoading, sendEmail} = useSendEmail()
+  
   const onSetSelectedIndex = (index) => {
     setSelectedIndex(index);
   };
 
-  const onContactFormSubmitHandler = (event)=>{
-    event.preventDefault()
-    const formData = new FormData(event.target)
-    const name = formData.get('name')
-    const contact = formData.get('contact')
-    const description = formData.get('description')
+  const onContactFormSubmitHandler = (event) => {
+    event.preventDefault();
+    setformLoading(true)
+    const formData = new FormData(event.target);
+    const name = formData.get("name");
+    const contact = formData.get("contact");
+    const description = formData.get("description");
 
-    console.log(name, contact, description)
-  }
-
+    console.log(name, contact, description);
+  };
 
   return (
-    <section className="w-full min-h-screen hero-padding pt-5">
+    <section
+      className="w-full min-h-screen hero-padding pt-5 scroll-margin-top"
+      id="contact"
+    >
       <div className="w-full h-[200px] bg-slate-300 relative rounded-lg overflow-hidden">
         <img
           src={workTogether}
@@ -91,13 +99,12 @@ const Contact = () => {
             ))}
           </div>
 
-
           <p className="text-slate-400 font-steradian mt-7">Your Budjet</p>
 
           <div className="flex flex-row flex-wrap justify-start">
             {budjetList.map((budjet, index) => (
               <ChooseButton
-                selected={index===selectedBudjetIndex}
+                selected={index === selectedBudjetIndex}
                 key={`choose-budjet-${budjet}`}
                 name={budjet}
                 onClick={setSelectedBudjectIndex.bind(null, index)}
@@ -105,29 +112,82 @@ const Contact = () => {
             ))}
           </div>
 
-
           <div className="mt-5 pb-6">
-            <form action="" className="w-full flex flex-col" onSubmit={onContactFormSubmitHandler}>
+            <form
+              action=""
+              className="w-full flex flex-col"
+              onSubmit={onContactFormSubmitHandler}
+            >
               <div className="grid grid-cols-1 tab-500:grid-cols-2 gap-4 items-end">
-                  <div className="flex flex-col w-full">
-                    <label htmlFor="name" className="text-slate-400 font-steradian mt-7 text-sm">Your name</label>
-                    <input type="text" name="name" id="name" className="border-b-2 w-full outline-none p-2 font-steradian" />
-                  </div>
+                <div className="flex flex-col w-full">
+                  <label
+                    htmlFor="name"
+                    className="text-slate-400 font-steradian mt-7 text-sm"
+                  >
+                    Your name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    className="border-b-2 w-full outline-none p-2 font-steradian"
+                  />
+                </div>
 
-                  <div className="flex flex-col w-full">
-                    <label htmlFor="name" className="text-slate-400 font-steradian mt-7 text-sm">Your email or phone number</label>
-                    <input type="text" name="contact" id="contact" className="border-b-2 w-full outline-none p-2 font-steradian" />
-                  </div>
-
+                <div className="flex flex-col w-full">
+                  <label
+                    htmlFor="name"
+                    className="text-slate-400 font-steradian mt-7 text-sm"
+                  >
+                    Your email or phone number
+                  </label>
+                  <input
+                    type="text"
+                    name="contact"
+                    id="contactinput"
+                    className="border-b-2 w-full outline-none p-2 font-steradian"
+                  />
+                </div>
               </div>
 
               <div className="flex flex-col w-full">
-                  <label htmlFor="name" className="text-slate-400 font-steradian mt-7 text-sm">Project Description (Optional)</label>
-                  <textarea rows={3} type="text" name="description" id="contact" className="border-b-2 w-full outline-none p-2 font-steradian" />
+                <label
+                  htmlFor="name"
+                  className="text-slate-400 font-steradian mt-7 text-sm"
+                >
+                  Project Description (Optional)
+                </label>
+                <textarea
+                  rows={3}
+                  type="text"
+                  name="description"
+                  id="description"
+                  className="border-b-2 w-full outline-none p-2 font-steradian"
+                />
               </div>
 
-              <input type="submit" value="Submit" className="bg-black100 text-white w-full p-4 mt-5 rounded-lg cursor-pointer font-steradian" />
-              
+              {/* <input
+                type="submit"
+                value="Submit"
+                className="bg-black100 text-white w-full p-4 mt-5 rounded-lg cursor-pointer font-steradian"
+              /> */}
+
+              <button type="submit" className={`bg-black100 text-white w-full p-4 mt-5 rounded-lg cursor-pointer font-steradian disabled:bg-green200 disabled:cursor-not-allowed`} disabled={formLoading}>
+                {
+                  formLoading?    <Spin
+                  indicator={
+                    <LoadingOutlined
+                      style={{
+                        fontSize: 24,
+                      }}
+                      spin
+                    />
+                  }
+                />: <p>Submit</p>
+
+                }
+             
+              </button>
             </form>
           </div>
         </div>

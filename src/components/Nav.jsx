@@ -53,16 +53,17 @@ const Nav = () => {
       <div className="flex flex-row items-center gap-3 max-tab-one:hidden">
         <motion.button
           whileTap={{ scale: 0.85 }}
-          className="px-7 py-[0.65rem] rounded-lg font-steradian bg-transparent border hover:border-green100 border-purple100 text-sm text-purple100"
+          className="px-7 py-[0.65rem] rounded-lg font-steradian bg-transparent border border-purple100 text-sm text-purple100"
         >
           Contact
         </motion.button>
-        <motion.button
+        <motion.a
           whileTap={{ scale: 0.85 }}
           className="px-7 py-[0.65rem] rounded-lg font-steradian bg-purple100 text-white text-sm"
+          href="#contact"
         >
           Work with us
-        </motion.button>
+        </motion.a>
       </div>
 
       <div className="tab-one:hidden">

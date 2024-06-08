@@ -1,14 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import AntdUiConfig from "./store/AntdUiConfig";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<HomePage/>}/>
-      </Routes>
-    </BrowserRouter>
-  )
-}
+    <AntdUiConfig>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
+    </AntdUiConfig>
+  );
+};
 
-export default App
+export default App;

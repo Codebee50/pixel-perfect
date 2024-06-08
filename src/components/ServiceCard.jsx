@@ -16,7 +16,7 @@ const ServiceCard = (props) => {
       viewport={{ once: true }}
     >
       <div className="flex flex-col">
-        <div className="bg-green100 p-2 rounded-md w-max">
+        <div className="bg-purple100 p-2 rounded-md w-max">
           <props.icon size={"1.2em"} className="fill-white" color="#ffffff" />
         </div>
         <p className="text-black100 font-steradian font-medium mt-2 text-xl">
