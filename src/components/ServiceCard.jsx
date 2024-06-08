@@ -1,7 +1,15 @@
 import { PiCaretDoubleRight } from "react-icons/pi";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { configurationActions } from "../store";
 
 const ServiceCard = (props) => {
+  const dispatch = useDispatch()
+  const onServiceCardClickedHandler = ()=>{
+      console.log(props.index)
+      dispatch(configurationActions.setService({service:props.index}))
+      window.location.href = '#contact'
+  }
   return (
     <motion.div
       className="flex flex-col items-start border border-[#e4dff7] p-5 rounded-md justify-between"
@@ -25,7 +33,7 @@ const ServiceCard = (props) => {
         <p className="text-sm text-gray100">{props.description}</p>
       </div>
 
-      <div className="cursor-pointer flex flex-row items-center mt-5 gap-2 text-black100 hover:text-green100">
+      <div className="cursor-pointer flex flex-row items-center mt-5 gap-2 text-black100 hover:text-green100" onClick={onServiceCardClickedHandler}>
         <p className="font-steradian">Get started </p>
         <PiCaretDoubleRight />
       </div>

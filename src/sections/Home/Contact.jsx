@@ -3,31 +3,106 @@ import { workTogether } from "../../assets/images";
 import { FaXTwitter } from "react-icons/fa6";
 import { budjetList, servicesList } from "../../constants";
 import ChooseServiceButton from "../../components/ChooseServiceButton";
-import { useState } from "react";
 import ChooseButton from "../../components/ChooseButton";
 import { LoadingOutlined } from "@ant-design/icons";
-import { Spin } from "antd";
+import { Spin, notification } from "antd";
+
 import useSendEmail from "../../hooks/useSendEmail";
 
+import { configurationActions } from "../../store";
+
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+
 const Contact = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [selectedBudjetIndex, setSelectedBudjectIndex] = useState(0);
-  const [formLoading, setformLoading] = useState(false)
-  const {isLoading, sendEmail} = useSendEmail()
-  
-  const onSetSelectedIndex = (index) => {
-    setSelectedIndex(index);
+  const selectedService = useSelector((state) => state.configuration.service);
+  const selectedBudjet = useSelector((state) => state.configuration.budjet);
+
+  const dispatch = useDispatch();
+
+  const { isLoading: formLoading, sendEmail } = useSendEmail();
+
+  const [api, contextHolder] = notification.useNotification();
+
+  const openNotification = (title, message) => {
+    api.open({
+      message: title,
+      description: message,
+      className: "font-steradian",
+      duration: 10,
+    });
+
+    
   };
+
+  const makeHtmlContent = (name, contact, description) => {
+    return `
+    <html>
+    <head></head>
+    <body style="padding: 30px;">
+        <br>
+        <h1>New mail from Pixel perfect website</h1>
+        <br><br>
+  
+        <p><b>Name: </b> ${name}</p> <br>
+        <p><b>Contact info: </b> ${contact}</p> <br>
+        <p><b>Message:</b> ${description}</p> <br>
+        <p><b>Selected service:</b> ${servicesList[selectedService].name}</p> <br>
+        <p><b>Selected budjet:</b> ${budjetList[selectedBudjet]}</p> <br>
+        <br>
+    </body>
+    </html>
+    `;
+  };
+
+  const onSetSelectedIndex = (index) => {
+    dispatch(configurationActions.setService({ service: index }));
+  };
+
+  const onSetSelectedBudjet = (index) => {
+    dispatch(configurationActions.setBudjet({ budjet: index }));
+  };
+
+  const onEmailSent = () => {
+    // openNotification(
+    //   "Email sent!",
+    //   "We appreciate you contacting Pixel Perfect. We have received the details of your request and a member of our team will be in touch shortly to discuss it further."
+    // );
+
+    notification.success({
+      message: 'We appreciate you contacting Pixel Perfect. We have received the details of your request and a member of our team will be in touch shortly to discuss it further.',
+      duration: 10,
+      className: 'font-steradian'
+    })
+  };
+
+  const onEmailError = () => {
+    notification.error({
+      message: 'An error occured while trying to deliver youe email, please ensure you are connected to the internet and try again.',
+      duration: 7,
+      className: 'font-steradian'
+    })
+  }
 
   const onContactFormSubmitHandler = (event) => {
     event.preventDefault();
-    setformLoading(true)
     const formData = new FormData(event.target);
     const name = formData.get("name");
     const contact = formData.get("contact");
     const description = formData.get("description");
 
-    console.log(name, contact, description);
+    const htmlEmail = makeHtmlContent(name, contact, description);
+
+    sendEmail({
+      toEmail: "onuhudoudo@gmail.com",
+      toName: "PixelPerfect",
+      senderName: name,
+      senderEmail: "onuhudoudo@gmail.com",
+      subject: `Pixel perfect mail from ${name}`,
+      htmlContent: htmlEmail,
+      onSuccess: onEmailSent,
+      onError: onEmailError
+    });
   };
 
   return (
@@ -35,6 +110,8 @@ const Contact = () => {
       className="w-full min-h-screen hero-padding pt-5 scroll-margin-top"
       id="contact"
     >
+      {contextHolder}
+
       <div className="w-full h-[200px] bg-slate-300 relative rounded-lg overflow-hidden">
         <img
           src={workTogether}
@@ -93,7 +170,7 @@ const Contact = () => {
                 service={service}
                 key={`choose-service-${service.name}`}
                 index={index}
-                selectedIndex={selectedIndex}
+                selectedIndex={selectedService}
                 onSetSelectedIndex={onSetSelectedIndex}
               />
             ))}
@@ -104,10 +181,10 @@ const Contact = () => {
           <div className="flex flex-row flex-wrap justify-start">
             {budjetList.map((budjet, index) => (
               <ChooseButton
-                selected={index === selectedBudjetIndex}
+                selected={index === selectedBudjet}
                 key={`choose-budjet-${budjet}`}
                 name={budjet}
-                onClick={setSelectedBudjectIndex.bind(null, index)}
+                onClick={onSetSelectedBudjet.bind(null, index)}
               />
             ))}
           </div>
@@ -172,21 +249,25 @@ const Contact = () => {
                 className="bg-black100 text-white w-full p-4 mt-5 rounded-lg cursor-pointer font-steradian"
               /> */}
 
-              <button type="submit" className={`bg-black100 text-white w-full p-4 mt-5 rounded-lg cursor-pointer font-steradian disabled:bg-green200 disabled:cursor-not-allowed`} disabled={formLoading}>
-                {
-                  formLoading?    <Spin
-                  indicator={
-                    <LoadingOutlined
-                      style={{
-                        fontSize: 24,
-                      }}
-                      spin
-                    />
-                  }
-                />: <p>Submit</p>
-
-                }
-             
+              <button
+                type="submit"
+                className={`bg-black100 text-white w-full p-4 mt-5 rounded-lg cursor-pointer font-steradian disabled:bg-green200 disabled:cursor-not-allowed`}
+                disabled={formLoading}
+              >
+                {formLoading ? (
+                  <Spin
+                    indicator={
+                      <LoadingOutlined
+                        style={{
+                          fontSize: 24,
+                        }}
+                        spin
+                      />
+                    }
+                  />
+                ) : (
+                  <p>Submit</p>
+                )}
               </button>
             </form>
           </div>

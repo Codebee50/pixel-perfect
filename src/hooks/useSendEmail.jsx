@@ -15,7 +15,7 @@ const useSendEmail = () => {
     onFinished = () => {},
   }) {
     if (!toEmail || !toName || !htmlContent) return;
-
+    setIsLoading(true);
     fetch("https://api.sendinblue.com/v3/smtp/email", {
       method: "POST",
       headers: {
@@ -47,19 +47,23 @@ const useSendEmail = () => {
       .then((response) => {
         if (response.ok) {
           onSuccess();
-        } else {
-          onError();
         }
         return response.json();
       })
       .then((data) => console.log(data))
-      .catch((error) => console.error("Error:", error))
-      .finally(onFinished);
+      .catch((error) => {
+        console.error("Error:", error);
+        onError();
+      })
+      .finally(() => {
+        setIsLoading(false);
+        onFinished();
+      });
   }
 
   return {
     isLoading,
-    sendEmail
+    sendEmail,
   };
 };
 
