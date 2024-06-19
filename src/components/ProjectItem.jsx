@@ -5,7 +5,7 @@ const ProjectItem = (props) => {
     <div className="w-full h-[500px] bg-green100 rounded-lg relative overflow-hidden">
 
         <div className="w-full h-full rounded-lg">
-            <img src={props.image} alt={props.title} className="w-full h-full object-cover object-center" />
+            <img src={props.image} alt={props.title} className="w-full h-full object-cover object-center" loading="lazy" />
         </div>
 
         <div className="absolute w-full top-0 h-full bg-gradient-to-t from-black z-10 rounded-lg flex flex-col p-5 justify-end">

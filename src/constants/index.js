@@ -20,7 +20,7 @@ export const navLinks = [
   },
   {
     label: "Testimonials",
-    link: "#",
+    link: "#testimonials",
   },
 ];
 

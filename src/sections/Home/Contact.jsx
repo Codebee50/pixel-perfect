@@ -103,7 +103,8 @@ const Contact = () => {
         <img
           src={workTogether}
           className="w-full h-full object-cover object-center"
-          alt=""
+          alt="Work with pixel perfect"
+          loading="lazy"
         />
         <div className="w-full h-full absolute bg-bg-overlay top-0 p-6 flex items-end">
           <p className="text-white font-bold font-steradian text-4xl">
