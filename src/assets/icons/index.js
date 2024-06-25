@@ -5,6 +5,8 @@ import curledarrrow from './curledarrow.svg'
 import straightarrow from './straightarrow.svg'
 import curlarrow from './curlarrow.svg'
 import arrowup from './arrowup.svg'
+import copyrightSign from './copyright-sign.svg'
+import whiteLogo from './whitelogo.svg'
 
 export{
     baselogo,
@@ -13,5 +15,7 @@ export{
     curledarrrow,
     curlarrow,
     straightarrow,
-    arrowup
+    arrowup,
+    copyrightSign,
+    whiteLogo
 }

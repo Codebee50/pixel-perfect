@@ -20,7 +20,8 @@ export default {
         'green100': '#31AA8E',
         'black100': '#01060E',
         'green200': '#f0f9f5',
-        'whatsappgreen': '#128C7E'
+        'whatsappgreen': '#128C7E',
+        "white-400": "rgba(255, 255, 255, 0.80)"
         
       },
       screens: {

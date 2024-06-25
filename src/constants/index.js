@@ -3,7 +3,15 @@ import { IoGameControllerOutline } from "react-icons/io5";
 import { CiMobile1 } from "react-icons/ci";
 import { MdOutlineBrandingWatermark } from "react-icons/md";
 import { w1, w2 } from "../assets/works";
+import { FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
+
+
+export const socialMedia = [
+  { src: FaTwitter, alt: "Twitter logo", href: ''},
+  { src: FaWhatsapp, alt: "Whatsapp logo", href: '' },
+  { src: FaInstagram, alt: "instagram logo", href: '' },
+];
 
 export const navLinks = [
   {
@@ -23,6 +31,19 @@ export const navLinks = [
     link: "#testimonials",
   },
 ];
+
+export const testimonialList = [
+  {
+    name: 'Mr. Lumana Bayero', 
+    position: 'CEO, Hannatu Halan Foundation', 
+    comment: 'As I scrolled through the website delivered by Pixel Perfect, I was really Impressed'
+  },
+  {
+    name: 'Mr. Suleiman Abdulahi', 
+    position: 'CEO, Auspicious Network Solutions', 
+    comment: "Pixel Perfect absolutely nailed the homepage hero section, mobile responsiveness. It's clear they put a lot of thought into user experience"
+  },
+]
 
 export const projectsList = [
   {
@@ -86,6 +107,32 @@ export const servicesList = [
     icon: SiTaichigraphics,
     description:
       "Our graphic designers create eye-catching visuals for all your needs, from marketing materials to digital content. We combine creativity with strategic thinking to produce designs that effectively communicate your message and captivate your audience. Whether you need promotional graphics, infographics, or custom illustrations, our team is here to bring your ideas to life.",
+  },
+];
+
+export const footerLinks = [
+  {
+      title: "Services",
+      links: servicesList.map((item)=>(
+        {
+          name:item.name,
+          link: '#contact'
+        }
+      )),
+  },
+  {
+      title: "Discover",
+      links: navLinks.map((item)=>({
+        name: item.label,
+        link: item.link
+      })),
+  },
+  {
+      title: "Get in touch",
+      links: [
+          { name: "customer@nike.com", link: "mailto:customer@nike.com" },
+          { name: "+92554862354", link: "tel:+92554862354" },
+      ],
   },
 ];
 
