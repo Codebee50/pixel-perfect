@@ -107,12 +107,13 @@ const Nav = () => {
         </div>
 
         <div className="flex flex-row items-center gap-3 max-tab-one:hidden">
-          <motion.button
+          <motion.a
             whileTap={{ scale: 0.85 }}
             className="px-7 py-[0.65rem] rounded-lg font-steradian bg-transparent border border-purple100 text-sm text-purple100"
+            href="#message"
           >
             Contact
-          </motion.button>
+          </motion.a>
           <motion.a
             whileTap={{ scale: 0.85 }}
             className="px-7 py-[0.65rem] rounded-lg font-steradian bg-purple100 text-white text-sm"

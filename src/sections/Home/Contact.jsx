@@ -262,6 +262,8 @@ const Contact = () => {
                   <p>Submit</p>
                 )}
               </button>
+
+              <p className="mt-4 text-gray100 font-steradian text-center"><a href="#message" className="text-purple100">Send us a message</a> if you have any questions or enquiries.</p>
             </form>
           </div>
         </div>

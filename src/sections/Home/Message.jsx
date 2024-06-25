@@ -62,7 +62,7 @@ const Message = () => {
   };
 
   return (
-    <div className="p-5 w-full hero-padding min-h-[70vh] bg-purple100 bg-[url('/src/assets/images/linebackground.svg')] bg-no-repeat bg-cover bg-center flex flex-row items-center justify-center">
+    <section id="message" className="scroll-margin-top p-5 w-full hero-padding min-h-[70vh] bg-purple100 bg-[url('/src/assets/images/linebackground.svg')] bg-no-repeat bg-cover bg-center flex flex-row items-center justify-center">
       <div className="flex flex-col w-[50%]">
         <p className="font-steradian font-bold text-4xl text-white">
           Send us a message
@@ -118,7 +118,7 @@ const Message = () => {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 
