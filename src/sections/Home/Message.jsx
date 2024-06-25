@@ -50,10 +50,10 @@ const Message = () => {
     const htmlEmail = makeHtmlContent(contact, message);
 
     sendEmail({
-      toEmail: "onuhudoudo@gmail.com",
+      toEmail: "pixelperfectwork@protonmail.com",
       toName: "PixelPerfect",
       senderName: contact,
-      senderEmail: "onuhudoudo@gmail.com",
+      senderEmail: "pixelperfectwork@protonmail.com",
       subject: `Pixel perfect mail from ${contact}`,
       htmlContent: htmlEmail,
       onSuccess: onEmailSent,

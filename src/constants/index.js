@@ -8,9 +8,9 @@ import { FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 
 export const socialMedia = [
-  { src: FaTwitter, alt: "Twitter logo", href: ''},
-  { src: FaWhatsapp, alt: "Whatsapp logo", href: '' },
-  { src: FaInstagram, alt: "instagram logo", href: '' },
+  { src: FaTwitter, alt: "Twitter logo", href: 'https://x.com/pixel_perfect_tech'},
+  { src: FaWhatsapp, alt: "Whatsapp logo", href: 'https://wa.link/6hqhvs' },
+  { src: FaInstagram, alt: "instagram logo", href: 'https://www.instagram.com/pixel.perfect.tech?igsh=eGNnajAwczdrYm0y' },
 ];
 
 export const navLinks = [
@@ -130,8 +130,8 @@ export const footerLinks = [
   {
       title: "Get in touch",
       links: [
-          { name: "hello@pixelperfect.com", link: "mailto:hello@pixelperfect.com" },
-          { name: "+92554862354", link: "tel:+08143015512" },
+          { name: "pixelperfectwork@protonmail.com", link: "mailto:pixelperfectwork@protonmail.com" },
+          { name: "+2349036784771", link: "tel:+2349036784771" },
       ],
   },
 ];

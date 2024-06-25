@@ -83,10 +83,10 @@ const Contact = () => {
     const htmlEmail = makeHtmlContent(name, contact, description);
 
     sendEmail({
-      toEmail: "onuhudoudo@gmail.com",
+      toEmail: "pixelperfectwork@protonmail.com",
       toName: "PixelPerfect",
       senderName: name,
-      senderEmail: "onuhudoudo@gmail.com",
+      senderEmail: "pixelperfectwork@protonmail.com",
       subject: `Pixel perfect mail from ${name}`,
       htmlContent: htmlEmail,
       onSuccess: onEmailSent,
