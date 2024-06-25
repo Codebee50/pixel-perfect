@@ -64,10 +64,10 @@ const Message = () => {
   return (
     <section id="message" className="scroll-margin-top p-5 w-full hero-padding min-h-[70vh] bg-purple100 bg-[url('/src/assets/images/linebackground.svg')] bg-no-repeat bg-cover bg-center flex flex-col sm:flex-row items-center justify-center">
       <div className="flex flex-col w-full max-sm:text-center sm:w-[50%]">
-        <p className="font-steradian font-bold text-4xl text-white">
+        <p className="font-steradian font-bold text-[1.5rem] sm:text-4xl text-white">
           Send us a message
         </p>
-        <p className="text-white-400  mt-2 font-steradian sm:max-w-[400px]">
+        <p className="text-white-400 max-sm:text-sm mt-2 font-steradian sm:max-w-[400px]">
           {
             "Have a question or just want to say hello? Send us a message, we're always delighted to hear from you."
           }
@@ -75,7 +75,7 @@ const Message = () => {
       </div>
 
       <div className="flex flex-col w-full sm:w-[50%] max-sm:mt-10 items-center justify-center">
-        <form action="" className="flex flex-col w-full px-10 gap-5" onSubmit={onContactFormSubmitHandler}>
+        <form action="" className="flex flex-col w-full px-3 sm:px-10 gap-5" onSubmit={onContactFormSubmitHandler}>
           {/* <input
             type="text"
             className="bg-white px-4 py-4 max-w-[500px] rounded-lg font-steradian shadow-lg outline-purple100"
@@ -84,12 +84,12 @@ const Message = () => {
           <input
             type="text"
             name="contact"
-            className="bg-white px-4 py-4 max-w-[500px] rounded-lg font-steradian shadow-lg outline-purple100"
+            className="bg-white px-4 py-4 sm:max-w-[500px] rounded-lg font-steradian shadow-lg outline-purple100"
             placeholder="Enter your phone or email"
           />
           <textarea
             name="message"
-            className="bg-white px-4 py-4 max-w-[500%] rounded-lg font-steradian shadow-lg outline-purple100"
+            className="bg-white px-4 py-4 sm:max-w-[500px] rounded-lg font-steradian shadow-lg outline-purple100"
             placeholder="Message"
             cols={30}
             rows={4}
