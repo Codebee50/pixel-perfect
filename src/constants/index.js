@@ -4,6 +4,7 @@ import { CiMobile1 } from "react-icons/ci";
 import { MdOutlineBrandingWatermark } from "react-icons/md";
 import { w1, w2 } from "../assets/works";
 import { FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { basol, bayero } from "../assets/users";
 
 
 
@@ -36,11 +37,13 @@ export const testimonialList = [
   {
     name: 'Mr. Lumana Bayero', 
     position: 'CEO, Hannatu Halan Foundation', 
-    comment: 'As I scrolled through the website delivered by Pixel Perfect, I was really Impressed'
+    comment: 'As I scrolled through the website delivered by Pixel Perfect, I was really Impressed',
+    image: bayero
   },
   {
     name: 'Mr. Suleiman Abdulahi', 
     position: 'CEO, Auspicious Network Solutions', 
+    image: basol,
     comment: "Pixel Perfect absolutely nailed the homepage hero section, mobile responsiveness. It's clear they put a lot of thought into user experience"
   },
 ]

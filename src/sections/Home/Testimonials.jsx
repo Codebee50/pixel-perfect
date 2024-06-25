@@ -39,8 +39,8 @@ const Testimonials = () => {
             <div className="w-full">
                 <div className="w-full min-h-[40vh] bg-slate-100 rounded-md flex flex-col px-5 pb-5 text-center">
 
-                    <div className="w-[120px] h-[120px] bg-green-300 rounded-full self-center -mt-7 overflow-hidden border-[10px] border-white">
-                        <img src={chatimgone} alt="" className="w-full h-full object-cover object-center"/>
+                    <div className="w-[120px] h-[120px] bg-white-400 rounded-full self-center -mt-7 overflow-hidden border-[10px] border-white">
+                        <img src={testimonialList[selectedIndex].image} alt="" className="w-full h-full object-cover object-center"/>
                     </div>
 
                     <div className="flex flex-col w-full items-center mt-5">

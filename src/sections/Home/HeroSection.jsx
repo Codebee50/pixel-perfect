@@ -69,7 +69,7 @@ const HeroSection = () => {
             <div className="absolute bottom-0 right-0 m-3 flex flex-col gap-2">
               <WhatsappChat
                 image={chatimgone}
-                name="Kyrian Pixel Perfect"
+                name="Nasir Pixel Perfect"
                 message="Website is now live"
                 time="8:00 AM"
                 numberOfMessages={2}
