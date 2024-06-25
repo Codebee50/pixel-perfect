@@ -6,6 +6,7 @@ import Contact from "../sections/Home/Contact"
 import HeroSection from "../sections/Home/HeroSection"
 import Testimonials from "../sections/Home/Testimonials"
 import Footer from "../components/Footer"
+import Message from "../sections/Home/Message"
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
         <Projects/>
         <Contact/>
         <Testimonials/>
+        <Message/>
         <Footer/>
     </Fragment>
   )

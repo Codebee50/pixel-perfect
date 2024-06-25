@@ -67,7 +67,7 @@ const Contact = () => {
   const onEmailError = () => {
     notification.error({
       message:
-        "An error occured while trying to deliver youe email, please ensure you are connected to the internet and try again.",
+        "An error occured while trying to deliver your email, please ensure you are connected to the internet and try again.",
       duration: 7,
       className: "font-steradian",
     });
