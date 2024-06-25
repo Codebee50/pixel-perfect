@@ -67,6 +67,13 @@ const Nav = () => {
           >
             Work with us
           </a>
+          <a
+            href="#message"
+            className="mt-10 text-vibrant-txt-color font-steradian text-xl hover:text-complement-color"
+            onClick={onClose}
+          >
+            Send us a message
+          </a>
         </div>
       </Drawer>
       <div
