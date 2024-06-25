@@ -28,7 +28,7 @@ const Testimonials = () => {
     <section id="testimonials" className="w-full py-20 hero-padding flex flex-col pt-20 scroll-margin-top">
 
         <div className="flex flex-col w-full items-center">
-            <h1 className="font-bold text-3xl font-steradian text-purple100">Testimonials</h1>
+            <h1 className="font-bold text-2xl sm:text-3xl font-steradian text-purple100">Testimonials</h1>
             <p className="font-steradian text-gray100">What our clients have to say about us.</p>
         </div>
 
