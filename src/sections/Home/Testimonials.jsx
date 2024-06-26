@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { chatimgone } from "../../assets/images"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 import { testimonialList } from "../../constants"
 

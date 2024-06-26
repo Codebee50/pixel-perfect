@@ -82,8 +82,8 @@ const Contact = () => {
 
     const htmlEmail = makeHtmlContent(name, contact, description);
 
-    sendEmail({
-      toEmail: "pixelperfectwork@protonmail.com",
+  sendEmail({
+      toEmail: "onuhudoudo@gmail.com",
       toName: "PixelPerfect",
       senderName: name,
       senderEmail: "pixelperfectwork@protonmail.com",
